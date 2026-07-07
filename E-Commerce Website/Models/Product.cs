@@ -8,40 +8,41 @@ using System.Threading.Tasks;
 
 namespace E_Commerce_Website.Models
 {
+    [Table("Products")]
     public class Product
     {
 
         [Key] // Primary Key
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)] // Auto Generated
-        public int productId { get; set; } // System Generated
+        public int ProductId { get; set; } // System Generated
 
         [Required] // Required
         [MaxLength(150)] // Max Length = 150
         public string productName { get; set; } // User Input
 
         [MaxLength(1000)] // Max Length = 1000
-        public string? description { get; set; } // Optional - User Input
+        public string? Description { get; set; } // Optional - User Input
 
         [Required] // Required  
         [Column(TypeName = "decimal(10,2)")] // Decimal Data Type
 
         [Range(0.01, double.MaxValue)] // Must be greater than 0
-        public decimal price { get; set; } // User Input
+        public decimal Price { get; set; } // User Input
 
         [Required] // Required
 
         [Range(0, double.MaxValue)] // Must be greater than or equal to 0
-        public int stockQuantity { get; set; } // User Input
+        public int StockQuantity { get; set; } // User Input
 
         [MaxLength(300)] // Max Length = 300
-        public string? imageUrl { get; set; } // Optional - User Input
+        public string? ImageUrl { get; set; } // Optional - User Input
 
         
 
         [Required] // Required
-        public DateTime createdAt { get; set; } // System Generated
+        public DateTime CreatedAt { get; set; } // System Generated
 
-        public bool isAvailable { get; set; } = true; // Default Value
+        public bool IsAvailable { get; set; } = true; // Default Value
 
 
 
@@ -49,7 +50,7 @@ namespace E_Commerce_Website.Models
         [Required] // Required
 
         [ForeignKey("Category")] // Foreign Key
-        public int categoryId { get; set; } // Foreign Key
+        public int CategoryId { get; set; } // Foreign Key
 
         // Navigation Properties
         public Category Category { get; set; } // Many Products -> One Category

@@ -128,3 +128,4 @@ C:\Users\mozam\Downloads\Moza\E-Commerce Website\E-Commerce Website\obj\Debug\ne
 C:\Users\mozam\Downloads\Moza\E-Commerce Website\E-Commerce Website\obj\Debug\net8.0\E-Commerce Website.pdb
 C:\Users\mozam\Downloads\Moza\E-Commerce Website\E-Commerce Website\obj\Debug\net8.0\E-Commerce Website.genruntimeconfig.cache
 C:\Users\mozam\Downloads\Moza\E-Commerce Website\E-Commerce Website\obj\Debug\net8.0\ref\E-Commerce Website.dll
+C:\Users\mozam\Downloads\Moza\E-Commerce Website\E-Commerce Website\obj\Debug\net8.0\E-Commerce Website.sourcelink.json

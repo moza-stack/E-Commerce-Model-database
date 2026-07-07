@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace E_Commerce_Website.Models
 {
+    [Table("Orders")]
     public class Order
     {
         [Key] // Primary Key

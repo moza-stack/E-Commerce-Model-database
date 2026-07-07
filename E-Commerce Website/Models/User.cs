@@ -8,8 +8,9 @@ using System.Threading.Tasks;
 
 namespace E_Commerce_Website.Models
 {
-   
-        public class User
+    [Table("Users")]
+
+    public class User
         {
        
 
