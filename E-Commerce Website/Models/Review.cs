@@ -34,7 +34,7 @@ namespace E_Commerce_Website.Models
         public int userId { get; set; } // Foreign Key
 
         // Navigation Properties
-        public User User { get; set; } // Many Reviews -> One User
+        public virtual User User { get; set; } // Many Reviews -> One User
 
 
         [Required] // Required
@@ -42,7 +42,7 @@ namespace E_Commerce_Website.Models
         public int productId { get; set; } // Foreign Key
 
         // navigation property
-        public Product product { get; set; } // Many Reviews -> One Product
+        public virtual Product product { get; set; } // Many Reviews -> One Product
     }
 }
     

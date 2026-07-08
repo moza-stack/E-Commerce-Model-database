@@ -12,7 +12,7 @@ namespace E_Commerce_Website
 
         public static void RegisterUser(ECommerceContext context)
         {
-            Console.WriteLine("\n=== Register New User ===");
+            Console.WriteLine("\n======****** Register New User************** ===");
 
             Console.Write("Enter username: ");
             string username = Console.ReadLine();
@@ -55,71 +55,71 @@ namespace E_Commerce_Website
 
         // 02 Add a New Product to a Category======== 
         public static void AddProduct(ECommerceContext context)
+        {
+
+            Console.WriteLine("\n==========********** Add New Product***********=============");
+
+
+            Console.WriteLine("\nEnter Category ID: ");
+            int categoryId = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Product Name: ");
+            string productName = Console.ReadLine();
+
+            Console.WriteLine("Description (optional): ");
+            string description = Console.ReadLine();
+
+            Console.WriteLine("Price: ");
+            decimal price = decimal.Parse(Console.ReadLine());
+
+            Console.WriteLine("Stock Quantity: ");
+            int stockQuantity = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Image URL (optional): ");
+            string imageUrl = Console.ReadLine();
+
+
+            var categories = context.Categories.ToList();
+
+            if (categories.Count == 0)
             {
-
-                Console.WriteLine("\n=== Add New Product ===");
-
-         
-                Console.WriteLine("\nEnter Category ID: ");
-                int categoryId = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Product Name: ");
-                string productName = Console.ReadLine();
-
-                Console.WriteLine("Description (optional): ");
-                string description = Console.ReadLine();
-
-                Console.WriteLine("Price: ");
-                decimal price = decimal.Parse(Console.ReadLine());
-
-                Console.WriteLine("Stock Quantity: ");
-                int stockQuantity = int.Parse(Console.ReadLine());
-
-                Console.WriteLine("Image URL (optional): ");
-                string imageUrl = Console.ReadLine();
-
-
-                var categories = context.Categories.ToList();
-
-                if (categories.Count == 0)
-                {
-                    Console.WriteLine("No categories found. Please add a category first.");
-                    return;
-                }
-
-                Console.WriteLine("\nAvailable Categories:");
-                foreach (var c in categories)
-                {
-                    Console.WriteLine($" ID:{c.categoryId} | Name: {c.categoryName}");
-                }
-
-                Product product = new Product
-                {
-                    productName = productName,
-                    Description = string.IsNullOrWhiteSpace(description) ? null : description,
-                    Price = price,
-                    StockQuantity = stockQuantity,
-                    ImageUrl = string.IsNullOrWhiteSpace(imageUrl) ? null : imageUrl,
-                    CreatedAt = DateTime.Now,
-                    IsAvailable = true,
-                    CategoryId = categoryId
-                };
-
-                context.Products.Add(product);
-                context.SaveChanges();
-
-                Console.WriteLine();
-                Console.WriteLine("Product Added Successfully.");
-                Console.WriteLine($"Product ID = {product.ProductId}");
+                Console.WriteLine("No categories found. Please add a category first.");
+                return;
             }
+
+            Console.WriteLine("\nAvailable Categories:");
+            foreach (var c in categories)
+            {
+                Console.WriteLine($" ID:{c.categoryId} | Name: {c.categoryName}");
+            }
+
+            Product product = new Product
+            {
+                productName = productName,
+                Description = string.IsNullOrWhiteSpace(description) ? null : description,
+                Price = price,
+                StockQuantity = stockQuantity,
+                ImageUrl = string.IsNullOrWhiteSpace(imageUrl) ? null : imageUrl,
+                CreatedAt = DateTime.Now,
+                IsAvailable = true,
+                CategoryId = categoryId
+            };
+
+            context.Products.Add(product);
+            context.SaveChanges();
+
+            Console.WriteLine();
+            Console.WriteLine("Product Added Successfully.");
+            Console.WriteLine($"Product ID = {product.ProductId}");
+        }
 
 
         // 03 Place an Order ===========
         public static void PlaceOrder(ECommerceContext context)
 
-            {
+        {
 
-            Console.WriteLine("\n========== Place Order ==========");
+            Console.WriteLine("\n==========******* Place Order***** ==========");
 
             // Display Users
             Console.WriteLine("\nAvailable Users:");
@@ -216,11 +216,11 @@ namespace E_Commerce_Website
 
             context.SaveChanges();
 
-            Console.WriteLine("\n=================================");
+            Console.WriteLine("\n==============*******************************===================");
             Console.WriteLine("Order Placed Successfully.");
             Console.WriteLine($"Order ID : {order.orderId}");
             Console.WriteLine($"Total Amount : {order.totalAmount}");
-            Console.WriteLine("=================================");
+            Console.WriteLine("==============*****************************===================");
 
         }
 
@@ -229,9 +229,9 @@ namespace E_Commerce_Website
 
         public static void WriteReview(ECommerceContext context)
 
-              {
+        {
 
-            Console.WriteLine("\n========== Write Product Review ==========");
+            Console.WriteLine("\n==========****** Write Product Review***** ==========");
 
             // Display Users
             Console.WriteLine("\nAvailable Users:");
@@ -240,27 +240,28 @@ namespace E_Commerce_Website
                 Console.WriteLine($"ID:{u.userId} | Name:{u.fullName}");
             }
 
-            Console.Write("\nEnter User ID: ");
+            Console.WriteLine("Enter User ID: ");
             int userId = Convert.ToInt32(Console.ReadLine());
 
             // Display Products
             Console.WriteLine("\nAvailable Products:");
             foreach (var p in context.Products)
             {
-               Console.WriteLine($"ID:{p.ProductId} | Name: {p.productName}");
+                Console.WriteLine($"ID:{p.ProductId} | Name: {p.productName}");
             }
 
-            Console.Write("\nEnter Product ID: ");
+            Console.WriteLine("Enter Product ID: ");
             int productId = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter Rating (1-5): ");
+            Console.WriteLine("Enter Rating (1-5): ");
             int rating = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Enter Comment (Optional): ");
+            Console.WriteLine("Enter Comment (Optional): ");
             string? comment = Console.ReadLine();
 
             Review review = new Review
             {
+                userId = userId,
                 productId = productId,
                 rating = rating,
                 comment = string.IsNullOrWhiteSpace(comment) ? null : comment,
@@ -272,16 +273,16 @@ namespace E_Commerce_Website
 
             Console.WriteLine("\nReview Added Successfully.");
             Console.WriteLine($"Review ID: {review.reviewId}");
-            }
+        }
 
 
         //  05 Update Product Price and Availability==============
 
-           public static void UpdateProduct(ECommerceContext context)
+        public static void UpdateProduct(ECommerceContext context)
 
-             {
+        {
 
-            Console.WriteLine("\n========== Update Product ==========");
+            Console.WriteLine("\n==========***** Update Product *****==========");
 
             // Display Products
             foreach (var p in context.Products)
@@ -289,7 +290,7 @@ namespace E_Commerce_Website
                 Console.WriteLine($" ID:{p.ProductId} | Name:{p.productName} | Price: {p.Price} | Available: {p.IsAvailable}");
             }
 
-            Console.Write("\nEnter Product ID: ");
+            Console.WriteLine("Enter Product ID: ");
             int productId = Convert.ToInt32(Console.ReadLine());
 
             // Fetch Product
@@ -301,10 +302,10 @@ namespace E_Commerce_Website
                 return;
             }
 
-            Console.Write("Enter New Price: ");
+            Console.WriteLine("Enter New Price: ");
             product.Price = Convert.ToDecimal(Console.ReadLine());
 
-            Console.Write("Is Product Available? (true / false): ");
+            Console.WriteLine("Is Product Available? (true / false): ");
             product.IsAvailable = Convert.ToBoolean(Console.ReadLine());
 
             // Save Changes
@@ -312,15 +313,15 @@ namespace E_Commerce_Website
 
             Console.WriteLine("\nProduct Updated Successfully.");
 
-            }
+        }
 
 
-             // 06 Cancel an Order=============
+        // 06 Cancel an Order=============
         public static void CancelOrder(ECommerceContext context)
 
-            {
+        {
 
-            Console.WriteLine("\n========== Cancel Order ==========");
+            Console.WriteLine("\n==========***** Cancel Order****** ==========");
 
             // Display Orders
             foreach (var O in context.Orders)
@@ -328,7 +329,7 @@ namespace E_Commerce_Website
                 Console.WriteLine($"Order ID: {O.orderId} | User ID: {O.userId} | Status: {O.status}");
             }
 
-            Console.Write("\nEnter Order ID: ");
+            Console.WriteLine("Enter Order ID: ");
             int orderId = Convert.ToInt32(Console.ReadLine());
 
             // Find Order
@@ -370,53 +371,291 @@ namespace E_Commerce_Website
 
             Console.WriteLine("\nOrder Cancelled Successfully.");
 
-            }
+        }
 
         // 07 Delete a Review===================== 
 
         public static void DeleteReview(ECommerceContext context)
 
         {
+            Console.WriteLine("\n==========****** Delete Review *******==========");
+
+
+            // Display All Reviews
+            foreach (var r in context.Reviews)
+            {
+                Console.WriteLine($"Review ID: {r.reviewId} | User ID: {r.userId} | Product ID: {r.productId} | Rating: {r.rating}");
+            }
+
+            Console.WriteLine("\nEnter Review ID to Delete: ");
+            int reviewId = Convert.ToInt32(Console.ReadLine());
+
+            // Find Review
+            Review review = context.Reviews.FirstOrDefault(r => r.reviewId == reviewId);
+
+            if (review == null)
+            {
+                Console.WriteLine("Review not found.");
+                return;
+            }
+
+            // Remove Review
+            context.Reviews.Remove(review);
+
+            // Save Changes
+            context.SaveChanges();
+
+            Console.WriteLine("\nReview Deleted Successfully.");
 
         }
 
 
-             // 08 View All Products (Get All) 
-             public static void ViewAllProducts(ECommerceContext context)
-
-               {
 
 
-               }
 
-                  // 09 Filter Products by Category and Price Range ================
+        // 08 View All Products (Get All) 
 
-             public static void FilterProducts(ECommerceContext context)
+        public static void ViewAllProducts(ECommerceContext context)
 
-               {
-
-               }
-               //10 Get Category with All Its Products (Include) ===================
-             public static void GetCategoryWithProducts(ECommerceContext context)
-
-              {
-
-              }
+        {
+            Console.WriteLine("\n==========***** View All Products ******==========");
 
 
-                // 11 View Order History with Full Details
-        
-               public static void ViewOrderHistory(ECommerceContext context)
+            List<Product> products = context.Products.ToList();
 
+            if (products.Count == 0)
+            {
+                Console.WriteLine("No products found.");
+                return;
+            }
+
+            foreach (Product p in products)
+            {
+                Console.WriteLine("------------------****************************----------------------");
+                Console.WriteLine($"Product ID : {p.ProductId}\n" +
+                                  $"Product Name: {p.productName}\n" +
+                                  $"Price : {p.Price}\n" +
+                                  $"Stock Quantity: {p.StockQuantity}\n" +
+                                  $"Available: {p.IsAvailable}\n");
+            }
+        }
+
+        // 09 Filter Products by Category and Price Range ================
+
+        public static void FilterProducts(ECommerceContext context)
+
+        {
+            {
+                Console.WriteLine("\n==========***** Filter Products****** ==========");
+
+
+                Console.WriteLine("\nAvailable Categories:");
+
+                foreach (var c in context.Categories)
                 {
+                    Console.WriteLine($"ID:{c.categoryId} | Name: {c.categoryName}");
+                }
+
+                Console.WriteLine("Enter Category ID: ");
+                int categoryId = Convert.ToInt32(Console.ReadLine());
+
+                Console.WriteLine("Enter Minimum Price: ");
+                decimal minPrice = Convert.ToDecimal(Console.ReadLine());
+
+                Console.WriteLine("Enter Maximum Price: ");
+                decimal maxPrice = Convert.ToDecimal(Console.ReadLine());
+
+                // Filter Product========
+                List<Product> products = context.Products
+                  .Where(p => p.CategoryId == categoryId
+                           && p.Price >= minPrice
+                           && p.Price <= maxPrice)
+                  .OrderBy(p => p.Price)
+                  .ToList();
+
+                if (products.Count == 0)
+                {
+                    Console.WriteLine("\nNo products found.");
+                    return;
+                }
+
+                Console.WriteLine("\nFiltered Products:");
+
+                foreach (var p in products)
+                {
+                    Console.WriteLine("---------------*****************************-------------------");
+                    Console.WriteLine($"Product ID : {p.ProductId}\n" +
+                                  $"Product Name: {p.productName}\n" +
+                                  $"Price : {p.Price}\n" +
+                                  $"Stock Quantity: {p.StockQuantity}\n" +
+                                  $"Available: {p.IsAvailable}\n");
+                }
+            }
+        }
+
+
+
+        //10 Get Category with All Its Products (Include) ===================
+        public static void GetCategoryWithProducts(ECommerceContext context)
+
+        {
+            Console.WriteLine("\n================**** Category With Products ******===============");
+
+            // Display Categories
+            foreach (var c in context.Categories)
+            {
+                Console.WriteLine($"{c.categoryId} | {c.categoryName}");
+            }
+
+            Console.WriteLine("Enter Category ID: ");
+            int categoryId = Convert.ToInt32(Console.ReadLine());
+
+            // Include Products
+            Category categoryData = context.Categories
+                                   .Include(c => c.Products).FirstOrDefault(c => c.categoryId == categoryId);
+
+            if (categoryData == null)
+            {
+                Console.WriteLine("Category not found.");
+                return;
+            }
+
+            Console.WriteLine("=======***********Category Information***********========");
+            Console.WriteLine($"Category ID   : {categoryData.categoryId}");
+            Console.WriteLine($"Category Name : {categoryData.categoryName}");
+            Console.WriteLine($"Description   : {categoryData.description}");
+
+            Console.WriteLine("Products");
+
+            if (categoryData.Products.Count == 0)
+            {
+                Console.WriteLine("No products found in this category.");
+                return;
+            }
+
+            foreach (var p in categoryData.Products)
+            {
+                Console.WriteLine("\n--------------**********--------------------------------------");
+                Console.WriteLine($"Product ID    : {p.ProductId}");
+                Console.WriteLine($"Product Name  : {p.productName}");
+                Console.WriteLine($"Price         : {p.Price}");
+                Console.WriteLine($"Stock         : {p.StockQuantity}");
+                Console.WriteLine($"Available     : {p.IsAvailable}");
+            }
+        }
+
+
+
+        // 11 View Order History with Full Details
+
+        public static void ViewOrderHistory(ECommerceContext context)
+
+        {
+            Console.WriteLine("\n==========******** Order History**************** ==========");
+
+            // Display Users
+            foreach (var u in context.Users)
+            {
+                Console.WriteLine($"{u.userId} | {u.fullName}");
+            }
+
+            Console.WriteLine("Enter User ID: ");
+            int userId = Convert.ToInt32(Console.ReadLine());
+
+            //  User -> Orders -> OrderItems -> Product
+            User user = context.Users
+                .Include(u => u.Orders)
+                .ThenInclude(o => o.OrderItems)
+                .ThenInclude(i => i.Product)
+                .FirstOrDefault(u => u.userId == userId);
+
+            if (user == null)
+            {
+                Console.WriteLine("User not found.");
+                return;
+            }
+
+            if (user.Orders.Count == 0)
+            {
+                Console.WriteLine("This user has no orders.");
+                return;
+            }
+
+            foreach (var order in user.Orders)
+            {
+                Console.WriteLine("\n================*************======================");
+                Console.WriteLine($"Order ID     : {order.orderId}");
+                Console.WriteLine($"Order Date   : {order.orderDate}");
+                Console.WriteLine($"Status       : {order.status}");
+                Console.WriteLine($"Total Amount : {order.totalAmount}");
+
+                Console.WriteLine("\nProducts:");
+
+                foreach (var item in order.OrderItems)
+                {
+                    Console.WriteLine("--------------------------------------");
+                    Console.WriteLine($"Product Name : {item.Product.productName}");
+                    Console.WriteLine($"Quantity     : {item.quantity}");
+                    Console.WriteLine($"Unit Price   : {item.unitPrice}");
+                    Console.WriteLine($"Sub Total    : {item.quantity * item.unitPrice}");
 
                 }
-                 // 12 Product Summary Report (Projection + Lazy
-               public static void ProductSummaryReport(ECommerceContext context)
+            }
+        }
 
-                 {
 
-                 }
+           // 12 Product Summary Report (Projection + Lazy
+           public static void ProductSummaryReport(ECommerceContext context)
+
+            {
+
+                Console.WriteLine("\n========== Product Summary Report ==========");
+
+            // ==========================*******=================
+            // Part A : Projection
+            // ==========================*******========
+
+            var report = context.Products
+                .Select(p => new
+                {
+                    ProductName = p.productName,
+                    CategoryName = p.Category.categoryName,
+                    ReviewCount = p.Reviews.Count(),
+
+                    AvgRating = p.Reviews.Any()
+                                ? p.Reviews.Average(r => r.rating)
+                                : 0
+                })
+                .ToList();
+
+            foreach (var item in report)
+            {
+                Console.WriteLine("----------------******************************---------------------");
+                Console.WriteLine($"Product  : {item.ProductName}");
+                Console.WriteLine($"Category : {item.CategoryName}");
+                Console.WriteLine($"Reviews  : {item.ReviewCount}");
+                Console.WriteLine($"Average  : {item.AvgRating:F2}");
+            }
+
+            // =============************************************************=============
+            // Part B : Lazy Loading
+            // =============**************************************************=============
+
+            Console.WriteLine("\n========== Lazy Loading Demo ==========");
+
+            Product product = context.Products.FirstOrDefault();
+
+            if (product != null)
+            {
+                Console.WriteLine($"Product : {product.productName}");
+
+                //  the second query fires
+                Console.WriteLine($"Number Of Reviews : {product.Reviews.Count}");
+
+            }
+        
+        }
+    
 
 
                public static void Main(string[] args)
@@ -429,9 +668,9 @@ namespace E_Commerce_Website
 
                 while (!exit)
                 {
-                    Console.WriteLine("\n========================================");
+                    Console.WriteLine("\n=================************************=======================");
                     Console.WriteLine("        E-Commerce System");
-                    Console.WriteLine("========================================");
+                    Console.WriteLine("=================**************************=======================");
                     Console.WriteLine(" 1  - Register User");
                     Console.WriteLine(" 2  - Add Product");
                     Console.WriteLine(" 3  - Plac eOrder");
@@ -445,7 +684,7 @@ namespace E_Commerce_Website
                     Console.WriteLine(" 11 - ViewOrderHistory");
                     Console.WriteLine("12 -ProductSummaryReport");
                     Console.WriteLine(" 0  - Exit");
-                    Console.WriteLine("========================================");
+                    Console.WriteLine("==================*********************************======================");
                     Console.Write("Select option: ");
 
                     int option = int.Parse(Console.ReadLine());

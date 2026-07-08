@@ -48,10 +48,10 @@ namespace E_Commerce_Website.Models
         // Navigation Properties
 
 
-        public User User { get; set; } // Many Orders -> One User
+        public virtual User User { get; set; } // Many Orders -> One User
 
 
         // reverse navigation — one Order has many OrderItems
-        public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>(); 
+        public virtual List<OrderItem> OrderItems { get; set; } = new List<OrderItem>(); 
     }
 }

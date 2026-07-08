@@ -26,13 +26,13 @@ namespace E_Commerce_Website.Models
         [Required] // Required
         [ForeignKey("Order")] // Foreign Key
         public int orderId { get; set; } // Foreign Key
-        public Order Order { get; set; }                  // navigation property
+        public virtual Order Order { get; set; }                  // navigation property
 
 
         [Required] // Required
         [ForeignKey("Product")] // Foreign Key
         public int productId { get; set; } // Foreign Key
-        public Product Product { get; set; }              // navigation property
+        public virtual Product Product { get; set; }              // navigation property
 
 
         [Required]

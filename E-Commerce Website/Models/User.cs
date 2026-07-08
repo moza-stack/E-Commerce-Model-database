@@ -46,16 +46,16 @@ namespace E_Commerce_Website.Models
 
             public bool isActive { get; set; } = true; // Default Value
 
-            
-            
+
+
         //reverse Navigation 
-           
-            
-            public List<Order> Orders { get; set; }  // One User -> Many Orders
+
+
+        public virtual List<Order> Orders { get; set; } = new List<Order>();  // One User -> Many Orders
 
 
             // reverse navigation
-        public List<Review> Reviews { get; set; } // One User -> Many Reviews
+        public virtual List<Review> Reviews { get; set; } =  new List<Review>();   // One User -> Many Reviews
         }
     }
 

@@ -20,7 +20,8 @@ namespace E_Commerce_Website
 
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer("Server=ALMAZIDI;Database=ECommerceDB;Trusted_Connection=True;TrustServerCertificate=True;");
+            options.UseSqlServer("Server=ALMAZIDI;Database=ECommerceDB;Trusted_Connection=True;TrustServerCertificate=True;")
+                .UseLazyLoadingProxies();
         }
 
     }

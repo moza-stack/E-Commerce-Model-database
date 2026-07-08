@@ -53,15 +53,15 @@ namespace E_Commerce_Website.Models
         public int CategoryId { get; set; } // Foreign Key
 
         // Navigation Properties
-        public Category Category { get; set; } // Many Products -> One Category
+        public virtual Category Category { get; set; } // Many Products -> One Category
 
 
         // reverse navigation 
-        public List<Review> Reviews { get; set; } = new List<Review>(); // One Product -> Many Reviews
+        public virtual List<Review> Reviews { get; set; } = new List<Review>(); // One Product -> Many Reviews
 
 
         // reverse navigation — one Product appears in many OrderItems (bridge table)
-        public List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();  
+        public virtual List<OrderItem> OrderItems { get; set; } = new List<OrderItem>();  
     }
 }
     

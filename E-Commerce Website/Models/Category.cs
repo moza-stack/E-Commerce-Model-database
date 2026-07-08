@@ -29,7 +29,7 @@ namespace E_Commerce_Website.Models
         
         //// reverse navigation One Category -> Many Products
     
-        public List<Product> Products { get; set; }  
+        public virtual List<Product> Products { get; set; } =new List<Product>();  
     }
 }
     
