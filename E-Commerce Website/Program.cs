@@ -8,7 +8,7 @@ namespace E_Commerce_Website
 
         // Service Functions
 
-        // 01 Register a New User =======
+        // 01 Register a New User ======={ADD}
 
         public static void RegisterUser(ECommerceContext context)
         {
@@ -53,11 +53,18 @@ namespace E_Commerce_Website
         }
 
 
-        // 02 Add a New Product to a Category======== 
+        // 02 Add a New Product to a Category======== {ADD}
         public static void AddProduct(ECommerceContext context)
         {
 
             Console.WriteLine("\n==========********** Add New Product***********=============");
+
+            List<Category> categories = context.Categories.ToList();
+            Console.WriteLine("Available categories:");
+            foreach (Category c in categories)
+
+
+                Console.WriteLine($" ID:{c.categoryId} | Name: {c.categoryName}");
 
 
             Console.WriteLine("\nEnter Category ID: ");
@@ -78,21 +85,7 @@ namespace E_Commerce_Website
             Console.WriteLine("Image URL (optional): ");
             string imageUrl = Console.ReadLine();
 
-
-            var categories = context.Categories.ToList();
-
-            if (categories.Count == 0)
-            {
-                Console.WriteLine("No categories found. Please add a category first.");
-                return;
-            }
-
-            Console.WriteLine("\nAvailable Categories:");
-            foreach (var c in categories)
-            {
-                Console.WriteLine($" ID:{c.categoryId} | Name: {c.categoryName}");
-            }
-
+        
             Product product = new Product
             {
                 productName = productName,
@@ -114,7 +107,7 @@ namespace E_Commerce_Website
         }
 
 
-        // 03 Place an Order ===========
+        // 03 Place an Order ==========={ADD}
         public static void PlaceOrder(ECommerceContext context)
 
         {
@@ -160,7 +153,7 @@ namespace E_Commerce_Website
             {
                 Console.WriteLine("\nAvailable Products:");
 
-                foreach (var p in context.Products)
+                foreach (Product p in context.Products)
                 {
                     Console.WriteLine($" ID:{p.ProductId} | Name: {p.productName} | Price: {p.Price} | Stock: {p.StockQuantity}");
                 }
@@ -225,7 +218,7 @@ namespace E_Commerce_Website
         }
 
 
-        //  04 Write a Product Review ============ 
+        //  04 Write a Product Review ============ {ADD}
 
         public static void WriteReview(ECommerceContext context)
 
@@ -245,7 +238,7 @@ namespace E_Commerce_Website
 
             // Display Products
             Console.WriteLine("\nAvailable Products:");
-            foreach (var p in context.Products)
+            foreach (Product p in context.Products)
             {
                 Console.WriteLine($"ID:{p.ProductId} | Name: {p.productName}");
             }
@@ -285,7 +278,7 @@ namespace E_Commerce_Website
             Console.WriteLine("\n==========***** Update Product *****==========");
 
             // Display Products
-            foreach (var p in context.Products)
+            foreach (Product p in context.Products)
             {
                 Console.WriteLine($" ID:{p.ProductId} | Name:{p.productName} | Price: {p.Price} | Available: {p.IsAvailable}");
             }
@@ -324,7 +317,7 @@ namespace E_Commerce_Website
             Console.WriteLine("\n==========***** Cancel Order****** ==========");
 
             // Display Orders
-            foreach (var O in context.Orders)
+            foreach (Order O in context.Orders)
             {
                 Console.WriteLine($"Order ID: {O.orderId} | User ID: {O.userId} | Status: {O.status}");
             }
@@ -353,7 +346,7 @@ namespace E_Commerce_Website
                                     .ToList();
 
             // Restore Stock
-            foreach (var item in orderItems)
+            foreach (OrderItem item in orderItems)
             {
                 Product product = context.Products.FirstOrDefault(p => p.ProductId == item.productId);
 
@@ -382,7 +375,7 @@ namespace E_Commerce_Website
 
 
             // Display All Reviews
-            foreach (var r in context.Reviews)
+            foreach (Review r in context.Reviews)
             {
                 Console.WriteLine($"Review ID: {r.reviewId} | User ID: {r.userId} | Product ID: {r.productId} | Rating: {r.rating}");
             }
@@ -451,7 +444,7 @@ namespace E_Commerce_Website
 
                 Console.WriteLine("\nAvailable Categories:");
 
-                foreach (var c in context.Categories)
+                foreach (Category c in context.Categories)
                 {
                     Console.WriteLine($"ID:{c.categoryId} | Name: {c.categoryName}");
                 }
@@ -481,7 +474,7 @@ namespace E_Commerce_Website
 
                 Console.WriteLine("\nFiltered Products:");
 
-                foreach (var p in products)
+                foreach (Product p in products)
                 {
                     Console.WriteLine("---------------*****************************-------------------");
                     Console.WriteLine($"Product ID : {p.ProductId}\n" +
@@ -502,7 +495,7 @@ namespace E_Commerce_Website
             Console.WriteLine("\n================**** Category With Products ******===============");
 
             // Display Categories
-            foreach (var c in context.Categories)
+            foreach (Category c in context.Categories)
             {
                 Console.WriteLine($"{c.categoryId} | {c.categoryName}");
             }
@@ -533,7 +526,7 @@ namespace E_Commerce_Website
                 return;
             }
 
-            foreach (var p in categoryData.Products)
+            foreach (Product p in categoryData.Products)
             {
                 Console.WriteLine("\n--------------**********--------------------------------------");
                 Console.WriteLine($"Product ID    : {p.ProductId}");
@@ -554,7 +547,7 @@ namespace E_Commerce_Website
             Console.WriteLine("\n==========******** Order History**************** ==========");
 
             // Display Users
-            foreach (var u in context.Users)
+            foreach (User u in context.Users)
             {
                 Console.WriteLine($"{u.userId} | {u.fullName}");
             }

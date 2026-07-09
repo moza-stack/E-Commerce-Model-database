@@ -3,20 +3,29 @@
   "WorkspaceRootPath": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|c:\\users\\mozam\\downloads\\moza\\e-commerce website\\e-commerce website\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|solutionrelative:e-commerce website\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|c:\\users\\mozam\\downloads\\moza\\e-commerce website\\e-commerce website\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|solutionrelative:e-commerce website\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|c:\\users\\mozam\\downloads\\moza\\e-commerce website\\e-commerce website\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|solutionrelative:e-commerce website\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mozam\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10_SoC\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mozam\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10\\EcommerceContext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\mozam\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10\\Program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|c:\\users\\mozam\\downloads\\moza\\e-commerce website\\e-commerce website\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|solutionrelative:e-commerce website\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|c:\\users\\mozam\\downloads\\moza\\e-commerce website\\e-commerce website\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|solutionrelative:e-commerce website\\ecommercecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|c:\\users\\mozam\\downloads\\moza\\e-commerce website\\e-commerce website\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|solutionrelative:e-commerce website\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FED6B93A-404C-40C4-DC45-DBC99276A4CF}|E-Commerce Website\\E-Commerce Website.csproj|c:\\users\\mozam\\downloads\\moza\\e-commerce website\\e-commerce website\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -42,7 +51,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,45 +63,80 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ECommerceContext.cs",
-              "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\ECommerceContext.cs",
-              "RelativeDocumentMoniker": "E-Commerce Website\\ECommerceContext.cs",
-              "ToolTip": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\ECommerceContext.cs",
-              "RelativeToolTip": "E-Commerce Website\\ECommerceContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mozam\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10_SoC\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10_SoC\\Program.cs",
+              "ToolTip": "C:\\Users\\mozam\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10_SoC\\Program.cs",
+              "RelativeToolTip": "..\\..\\..\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10_SoC\\Program.cs",
+              "ViewState": "AgIAADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-08T07:23:43.314Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-07-09T07:04:34.871Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\Models\\User.cs",
-              "RelativeDocumentMoniker": "E-Commerce Website\\Models\\User.cs",
-              "ToolTip": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\Models\\User.cs",
-              "RelativeToolTip": "E-Commerce Website\\Models\\User.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAmwDUAAABMAAAAAAAAAA==",
+              "Title": "EcommerceContext.cs",
+              "DocumentMoniker": "C:\\Users\\mozam\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10\\EcommerceContext.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10\\EcommerceContext.cs",
+              "ToolTip": "C:\\Users\\mozam\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10\\EcommerceContext.cs",
+              "RelativeToolTip": "..\\..\\..\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10\\EcommerceContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-07T04:33:01.841Z"
+              "WhenOpened": "2026-07-09T07:04:20.678Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\mozam\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10\\Program.cs",
+              "RelativeDocumentMoniker": "..\\..\\..\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10\\Program.cs",
+              "ToolTip": "C:\\Users\\mozam\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10\\Program.cs",
+              "RelativeToolTip": "..\\..\\..\\OneDrive\\Desktop\\backend\\BackendSessionsImplementations\\Backend_session_10\\Program.cs",
+              "ViewState": "AgIAALEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-09T07:03:59.686Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\Program.cs",
               "RelativeDocumentMoniker": "E-Commerce Website\\Program.cs",
               "ToolTip": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\Program.cs",
               "RelativeToolTip": "E-Commerce Website\\Program.cs",
-              "ViewState": "AgIAACoCAAAAAAAAAAAAwAcBAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAP4AAAAAAAAAAAAIwK8AAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-06T10:57:13.06Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 5,
+              "Title": "ECommerceContext.cs",
+              "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\ECommerceContext.cs",
+              "RelativeDocumentMoniker": "E-Commerce Website\\ECommerceContext.cs",
+              "ToolTip": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\ECommerceContext.cs",
+              "RelativeToolTip": "E-Commerce Website\\ECommerceContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-08T07:23:43.314Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\Models\\User.cs",
+              "RelativeDocumentMoniker": "E-Commerce Website\\Models\\User.cs",
+              "ToolTip": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\Models\\User.cs",
+              "RelativeToolTip": "E-Commerce Website\\Models\\User.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAADUAAABMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T04:33:01.841Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "Review.cs",
               "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\Models\\Review.cs",
               "RelativeDocumentMoniker": "E-Commerce Website\\Models\\Review.cs",
@@ -104,7 +148,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 9,
               "Title": "Product.cs",
               "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\Models\\Product.cs",
               "RelativeDocumentMoniker": "E-Commerce Website\\Models\\Product.cs",
@@ -116,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "OrderItem.cs",
               "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\Models\\OrderItem.cs",
               "RelativeDocumentMoniker": "E-Commerce Website\\Models\\OrderItem.cs",
@@ -128,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Order.cs",
               "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\Models\\Order.cs",
               "RelativeDocumentMoniker": "E-Commerce Website\\Models\\Order.cs",
@@ -140,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Category.cs",
               "DocumentMoniker": "C:\\Users\\mozam\\Downloads\\Moza\\E-Commerce Website\\E-Commerce Website\\Models\\Category.cs",
               "RelativeDocumentMoniker": "E-Commerce Website\\Models\\Category.cs",
